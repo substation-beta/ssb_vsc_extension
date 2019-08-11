@@ -1,0 +1,117 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Substation Beta",
+	"patterns": [
+		{
+			"include": "#macros-section"
+		},
+		{
+			"include": "#events-section"
+		},
+		{
+			"include": "#target-section"
+		},
+		{
+			"include": "#info-section"
+		},
+		{
+			"include": "#resource-section"
+		}
+	],
+	"repository": {
+		"info-section": {
+			"begin": "(#INFO)",
+			"end": "(?=#)",
+			"beginCaptures": {"1": {"name": "keyword.section"}},
+			"patterns": [
+				{
+					"match": "^(\/\/.*)$|(^.*?)(:)(.*?)$",
+					"captures": {
+						"1": {"name": "comment"},
+						"2": {"name": "variable.name"},
+						"3": {"name": "variable.other"},
+						"4": {"name": "string", "patterns": [{
+							"include": "#events"
+						}]}
+					}
+				}]
+		},
+		"resource-section": {
+			"begin": "(#RESOURCE)",
+			"end": "(?=#)",
+			"beginCaptures": {"1": {"name": "keyword.section"}},
+			"patterns": [
+				{
+					"match": "^(\/\/.*)$|(^.*?)(:)(.*?)$",
+					"captures": {
+						"1": {"name": "comment.line"},
+						"2": {"name": "variable.name"},
+						"3": {"name": "variable.other"},
+						"4": {"name": "string", "patterns": [{
+							"include": "#events"
+						}]}
+					}
+				}]
+		},
+		"macros-section": {
+			"begin": "(#MACROS)",
+			"end": "(?=#)",
+			"beginCaptures": {"1": {"name": "keyword.section"}},
+			"patterns": [
+				{
+					"match": "^(\/\/.*)$|(^.*?)(:)(.*?)$",
+					"captures": {
+						"1": {"name": "comment.line"},
+						"2": {"name": "variable.name"},
+						"3": {"name": "variable.other"},
+						"4": {"name": "string", "patterns": [{
+							"include": "#events"
+						}]}
+					}
+				}]
+		},
+		"target-section": {
+			"begin": "(#TARGET)",
+			"end": "(?=#)",
+			"beginCaptures": {"1": {"name": "keyword.section"}},
+			"patterns": [
+				{
+					"match": "^(\/\/.*)$|(^.*?)(:)(.*?)$",
+					"captures": {
+						"1": {"name": "comment.line"},
+						"2": {"name": "variable.name"},
+						"3": {"name": "variable.other"},
+						"4": {"name": "string", "patterns": [{
+							"include": "#events"
+						}]}
+					}
+				}]
+		},
+		"events-section": {
+			"begin": "(#EVENTS)",
+			"end": "(?=#)",
+			"beginCaptures": {"1": {"name": "keyword.section"}},
+			"patterns": [
+				{
+				"match": "^(\/\/.*)$|(^.*?)([|])(.*?)([|])(.*?)([|])(.*?)$",
+				"captures": {
+					"1": {"name": "comment.line"},
+					"2": {"name": "constant.numeric"},
+					"3": {"name": "constant.language"},
+					"4": {"name": "variable.name"},
+					"5": {"name": "constant.language"},
+					"6": {"name": "comment.block"},
+					"7": {"name": "constant.language"},
+					"8": {"name": "string", "patterns": [{
+						"include": "#events"
+					}]}
+				}
+			}]
+		},
+		"events": {
+			"name": "entity.name.tag",
+			"match": "(\\[.*\\])"
+		}
+	},
+	"scopeName": "source.ssb"
+}
