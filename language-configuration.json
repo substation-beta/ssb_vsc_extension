@@ -18,8 +18,8 @@
 
     "folding": {
         "markers": {
-			"start": "^(#.*)?$",
-            "end": "^"
+			"start": "(#INFO)",
+            "end": "(?=#)"
         }
     }
 }
