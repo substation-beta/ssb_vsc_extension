@@ -4,7 +4,7 @@
     "description": "Substation beta",
     "version": "0.0.1",
     "license": "MIT",
-    "publisher": "SSB",
+    "publisher": "Substation-Beta",
     "homepage": "https://github.com/substation-beta",
     "repository": "https://github.com/substation-beta/ssb_vsc_extension",
     "engines": {
