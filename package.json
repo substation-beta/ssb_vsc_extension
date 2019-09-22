@@ -2,7 +2,7 @@
     "name": "ssb",
     "displayName": "ssb",
     "description": "Substation beta",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "license": "MIT",
     "publisher": "Substation-Beta",
     "homepage": "https://github.com/substation-beta",
@@ -14,17 +14,26 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "ssb",
-            "aliases": ["Substation Beta", "ssb"],
-            "extensions": [".ssb"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "ssb",
-            "scopeName": "source.ssb",
-            "path": "./syntaxes/ssb.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "ssb",
+                "aliases": [
+                    "Substation Beta",
+                    "ssb"
+                ],
+                "extensions": [
+                    ".ssb"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ssb",
+                "scopeName": "source.ssb",
+                "path": "./syntaxes/ssb.tmLanguage.json"
+            }
+        ]
     },
     "activationEvents": [
         "onLanguage:ssb"
