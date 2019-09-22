@@ -4,7 +4,9 @@
     "description": "Substation beta",
     "version": "0.0.1",
     "license": "MIT",
+    "publisher": "SSB",
     "homepage": "https://github.com/substation-beta",
+    "repository": "https://github.com/substation-beta/ssb_vsc_extension",
     "engines": {
         "vscode": "^1.37.0"
     },
@@ -25,7 +27,7 @@
         }]
     },
     "activationEvents": [
-            "onLanguage:ssb"
+        "onLanguage:ssb"
     ],
     "main": "./out/extension.js",
     "scripts": {
