@@ -2,11 +2,16 @@
     "name": "ssb",
     "displayName": "ssb",
     "description": "Substation beta",
-    "version": "0.1.1",
+    "version": "0.1.3",
     "license": "MIT",
     "publisher": "Substation-Beta",
     "homepage": "https://github.com/substation-beta",
     "repository": "https://github.com/substation-beta/ssb_vsc_extension",
+    "icon": "images/icon.png",
+    "galleryBanner": {
+        "color": "#1F2833",
+        "theme": "dark"
+    },
     "engines": {
         "vscode": "^1.37.0"
     },
